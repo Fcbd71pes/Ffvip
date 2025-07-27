@@ -17,9 +17,9 @@ echo ""
 echo -e "${YELLOW}[*] Updating package lists and upgrading...${NC}"
 pkg update -y && pkg upgrade -y
 echo ""
-# --- pgrep কমান্ডের জন্য procps যোগ করা হয়েছে ---
-echo -e "${YELLOW}[*] Installing required packages (python, git, nano, cloudflared, procps)...${NC}"
-pkg install python git nano cloudflared procps -y
+# --- *** গুরুত্বপূর্ণ পরিবর্তন এখানে *** ---
+echo -e "${YELLOW}[*] Installing required packages (python, git, nano, cloudflared)...${NC}"
+pkg install python git nano cloudflared -y
 echo -e "${GREEN}[✔] System packages installed successfully.${NC}"
 echo ""
 
@@ -77,8 +77,10 @@ echo -e "${BLUE}=====================================================${NC}"
 echo -e "${GREEN}Congratulations! Setup is complete! 🎉${NC}"
 echo -e "${BLUE}=====================================================${NC}"
 echo ""
-echo -e "To start the server, you must ${YELLOW}close and reopen Termux.${NC}"
-echo "The server will then start automatically in the background."
+echo -e "To start the server, you can either:"
+echo -e "1. ${YELLOW}Close and reopen Termux.${NC} The server will start automatically."
+echo -e "2. ${YELLOW}Run the watchdog script manually now:${NC} (cd ~/Ffvip && sh watchdog.sh &)"
 echo ""
+echo "Your server will now run in the background and restart automatically."
 echo "You can manage everything from your Telegram bot."
 echo ""
